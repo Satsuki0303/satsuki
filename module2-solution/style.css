@@ -1,26 +1,37 @@
 body {
     font-family: Arial, sans-serif;
 }
-header h1 {
+.header h1 {
     text-align: center;
+    background: #333;
+    color: #fff;
+    padding: 10px 0;
+    margin: 0;
 }
-.container {
-    width: 100%;
-}
-.menu-item {
-    border: 1px solid black;
-    background-color: #ffffff; /* Change to your preferred color */
-    margin: 15px;
+
+.menu-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap; /* 确保在窄屏幕上可以换行 */
     padding: 20px;
-    box-sizing: border-box;
 }
+
+.menu-item {
+    border: 1px solid #000;
+    padding: 20px; 
+    width: 30%; /* 可以调整宽度以适应实际的布局需求 */
+    position: relative; /* 为.menu-title的绝对定位做准备 */
+    margin: 10px; /* 确保有足够的间隙 */
+}
+
 .menu-title {
-    position: absolute;
-    top: -10px;
-    right: 10px;
+    background: #444; 
+    color: #fff;
     padding: 5px;
-    background-color: #cccccc; /* Change to your preferred color */
-    border: 1px solid black;
+    position: absolute; 
+    right: 0px;
+    top: 0px; 
+    z-index: 10; 
 }
 
 /* Desktop view */
@@ -47,6 +58,10 @@ header h1 {
 /* Mobile view */
 @media (max-width: 767px) {
     .menu-item {
+        width: calc(100% - 30px); /* Subtracting the total margin */
+        float: none;
+    }
+}
         width: calc(100% - 30px); /* Subtracting the total margin */
         float: none;
     }
