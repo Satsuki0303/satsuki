@@ -1,1 +1,53 @@
+body {
+    font-family: Arial, sans-serif;
+}
+header h1 {
+    text-align: center;
+}
+.container {
+    width: 100%;
+}
+.menu-item {
+    border: 1px solid black;
+    background-color: #ffffff; /* Change to your preferred color */
+    margin: 15px;
+    padding: 20px;
+    box-sizing: border-box;
+}
+.menu-title {
+    position: absolute;
+    top: -10px;
+    right: 10px;
+    padding: 5px;
+    background-color: #cccccc; /* Change to your preferred color */
+    border: 1px solid black;
+}
 
+/* Desktop view */
+@media (min-width: 992px) {
+    .menu-item {
+        width: calc(33.333% - 30px); /* Subtracting the total margin */
+        float: left;
+    }
+}
+
+/* Tablet view */
+@media (min-width: 768px) and (max-width: 991px) {
+    .menu-item {
+        width: calc(50% - 30px); /* Subtracting the total margin */
+        float: left;
+    }
+    .menu-item:last-child {
+        width: calc(100% - 30px); /* Subtracting the total margin */
+        float: none;
+        clear: both;
+    }
+}
+
+/* Mobile view */
+@media (max-width: 767px) {
+    .menu-item {
+        width: calc(100% - 30px); /* Subtracting the total margin */
+        float: none;
+    }
+}
