@@ -1,3 +1,4 @@
+style.css
 *{
     box-sizing: border-box;
     margin:0;
@@ -126,7 +127,3 @@
       float: left;
     }
   }
-        width: calc(100% - 30px); /* Subtracting the total margin */
-        float: none;
-    }
-}
